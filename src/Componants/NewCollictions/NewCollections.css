@@ -1,0 +1,44 @@
+.new-collections{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+    margin-bottom: 600px;
+   
+   }
+   .new-collections h1{
+       color: black;
+       font-size: 50px;
+       font-weight: 600;
+   
+   }
+   .new-collections hr{
+       width: 200px;
+       height: 5px;
+       border-radius: 10px;
+       background-color: #1e573a;
+   }
+   .collections {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 30px;
+       padding: 0 20px;
+       margin-left: 140px;
+      
+   }
+   .collections img {
+       width: 100%;
+       max-width: 250px;
+       height: auto;
+       display: flex;
+       justify-content: center;
+       border-radius:  20px 0 20px 0;
+       
+   }
+   .collections p {
+      font-size: 14px;
+      padding: 10px 8px;
+       
+   }
