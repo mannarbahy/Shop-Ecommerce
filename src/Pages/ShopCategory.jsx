@@ -2,13 +2,23 @@ import React, { useContext } from 'react'
 import './CSS/ShopCategory.css'
 import { ShopContext } from '../Context/ShopContext'
 import Items from '../Componants/Item/Items'
+import dropdown_icon from '../Componants/Assets/dropdown_icon.png'
 
 const ShopCategory = (props) => {
   const {all_products} = useContext(ShopContext)
   
   return (
     <div className='shop-category'>
-      <img src={props.banner} alt="" />
+      <img className='shopcategory-banner' src={props.banner} alt="" />
+      <div className="shopcategory-indexSort">
+        <p>
+          <span>Showing 1-12</span> 
+          Out of 36 Products
+        </p>
+        <div className="shopcategory-sort">
+          Sort by <img src={dropdown_icon} alt="dropdown icon" />
+        </div>
+      </div>
       <div className="shopcategory-products">
         {all_products.map((item, i) => {
           if (props.category === item.category) {
