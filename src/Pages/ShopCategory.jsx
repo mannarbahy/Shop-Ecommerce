@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext ,useEffect} from 'react'
 import './CSS/ShopCategory.css'
 import { ShopContext } from '../Context/ShopContext'
 import Items from '../Componants/Item/Items'
@@ -6,6 +6,16 @@ import dropdown_icon from '../Componants/Assets/dropdown_icon.png'
 
 const ShopCategory = (props) => {
   const {all_products} = useContext(ShopContext)
+   
+  useEffect(() => {
+    console.log('Category prop:', props.category);
+    console.log('All products:', all_products);
+    const filteredProducts = all_products.filter(item => item.category === props.category);
+    console.log('Filtered products:', filteredProducts);
+  }, [props.category, all_products]);
+
+  const filteredProducts = all_products.filter(item => item.category === props.category);
+
   
   return (
     <div className='shop-category'>
@@ -21,6 +31,7 @@ const ShopCategory = (props) => {
       </div>
       <div className="shopcategory-products">
         {all_products.map((item, i) => {
+         
           if (props.category === item.category) {
             return <Items 
               key={i}
@@ -34,6 +45,15 @@ const ShopCategory = (props) => {
             return null;
           }
         })}
+      </div>
+      {filteredProducts.length === 0 && (
+        <div className="no-products">
+          No products found in this category
+        </div>
+      )}
+    
+      <div className="shopcategory-loadmore">
+        Explor More
       </div>
     </div>
   )

@@ -1,0 +1,111 @@
+.loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F7FAFC;
+}
+
+.loginsignup-continer {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginsignup-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.loginsignup-toggle button {
+    flex: 1;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.loginsignup-toggle button.active {
+    background-color: #38A169;
+    color: #fff;
+}
+
+.loginsignup-toggle button:hover {
+    background-color: #2F855A;
+    color: #fff;
+}
+
+.loginsignup-continer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: poppins;
+}
+
+.loginsignup-continer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginsignup-continer form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginsignup-continer form button {
+    padding: 10px;
+    background-color: #38A169;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginsignup-continer form button:hover {
+    background-color: #2F855A;
+}
+
+.loginsignup-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.loginsignup-login span {
+    margin: 0 10px;
+    color: #2F855A;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.loginsignup-agree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.loginsignup-agree input {
+    margin-right: 15px;
+}
+
+.loginsignup-agree p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.loginsignup-agree input[type="checkbox"]:checked {
+    cursor: pointer;
+    filter: hue-rotate(-0.25turn);
+}

@@ -1,10 +1,17 @@
 import React from 'react'
 import './Items.css'
+import { Link } from 'react-router-dom'
+
 const Items = (props) => {
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className='item'>
-        <img src={props.image} alt=''/>
-        <p>{props.name}</p>
+     <Link to={`/product/${props.id}`}> <img onClick={handleClick}  src={props.image} alt=''/> </Link>  <p>{props.name}</p>
         <div className="item-prices">
             <div className="item-price-new">
                 ${props.new_price}
@@ -13,6 +20,7 @@ const Items = (props) => {
                 ${props.old_price}
             </div>
         </div>
+       
     </div>
   )
 }
